@@ -36,27 +36,34 @@ function HeaderLinks({ ...props }) {
           buttonIcon={Apps}
           dropdownList={[
             <Link to="/" className={classes.dropdownLink}>
-              All components
+              Blog
             </Link>,
-            <a
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>
+            <Link to="/videos" className={classes.dropdownLink}>
+            videos
+          </Link>,
+          
+            <Link to="/music" className={classes.dropdownLink}>
+            Music
+          </Link>,
+            // <a
+            //   href=""
+            //   target="_blank"
+            //   className={classes.dropdownLink}
+            // >
+            //   Documentation
+            // </a>
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
+        {/* <Button
           href="https://www.creative-tim.com/product/material-kit-react"
           color="transparent"
           target="_blank"
           className={classes.navLink}
         >
           <CloudDownload className={classes.icons} /> Download
-        </Button>
+        </Button> */}
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
@@ -64,9 +71,10 @@ function HeaderLinks({ ...props }) {
           title="Follow us on twitter"
           placement={typeof window !== 'undefined' && window.innerWidth > 959 ? "top" : "left"}
           classes={{ tooltip: classes.tooltip }}
+          href="https://instagram.com/matrixblendmedia"
         >
           <Button
-            href="https://twitter.com/CreativeTim"
+            href="https://twitter.com/matrixblend"
             target="_blank"
             color="transparent"
             className={classes.navLink}
@@ -84,7 +92,7 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/CreativeTim"
+            href="https://www.facebook.com/matrixblend"
             target="_blank"
             className={classes.navLink}
           >
@@ -101,7 +109,7 @@ function HeaderLinks({ ...props }) {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
+            href="https://www.instagram.com/matrixblend"
             target="_blank"
             className={classes.navLink}
           >

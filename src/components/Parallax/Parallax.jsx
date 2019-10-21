@@ -8,6 +8,8 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 // core components
 import parallaxStyle from "assets/jss/material-kit-react/components/parallaxStyle.jsx";
+import videoSource from "assets/videos/_Randomly_ by Katlyn Nichol.mp4";
+
 
 class Parallax extends React.Component {
   constructor(props) {
@@ -42,17 +44,23 @@ class Parallax extends React.Component {
       children,
       style,
       image,
+      video,
       small
     } = this.props;
+    
     const parallaxClasses = classNames({
       [classes.parallax]: true,
       [classes.filter]: filter,
       [classes.small]: small,
       [className]: className !== undefined
     });
+  
     return (
+      
       <div
+      
         className={parallaxClasses}
+        
         style={{
           ...style,
           backgroundImage: "url(" + image + ")",
@@ -60,11 +68,13 @@ class Parallax extends React.Component {
         }}
         ref="parallax"
       >
-        {children}
+      {children}
       </div>
     );
   }
 }
+
+
 
 Parallax.propTypes = {
   classes: PropTypes.object.isRequired,
@@ -72,7 +82,9 @@ Parallax.propTypes = {
   filter: PropTypes.bool,
   children: PropTypes.node,
   style: PropTypes.string,
-  image: PropTypes.string
+  image: PropTypes.string,
+  video: PropTypes.string,
+
 };
 
 export default withStyles(parallaxStyle)(Parallax);

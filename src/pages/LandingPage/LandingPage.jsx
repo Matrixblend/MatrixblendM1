@@ -35,12 +35,12 @@ class LandingPage extends React.Component {
         <Header
           color="transparent"
           routes={dashboardRoutes}
-          brand="Material Kit React"
+          brand="Matrixblend Media"
           rightLinks={<HeaderLinks />}
           fixed
           changeColorOnScroll={{
             height: 400,
-            color: "white"
+            color: "black"
           }}
           {...rest}
         />

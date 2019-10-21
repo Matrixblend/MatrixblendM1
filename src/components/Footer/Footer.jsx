@@ -28,16 +28,16 @@ function Footer({ ...props }) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/"
+                href="https://www.twitter.com/_joshhead_"
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
+                J.eldon
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/presentation"
+                href="/about"
                 className={classes.block}
                 target="_blank"
               >
@@ -55,7 +55,7 @@ function Footer({ ...props }) {
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/license"
+                href="/"
                 className={classes.block}
                 target="_blank"
               >
@@ -65,16 +65,15 @@ function Footer({ ...props }) {
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
+          &copy; {1900 + new Date().getYear()} Made with 
           <Favorite className={classes.icon} /> by{" "}
           <a
-            href="https://www.creative-tim.com"
+            href="https://www.matrixblendmedia.com"
             className={aClasses}
             target="_blank"
           >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+            Matrixblend Media
+          </a>
         </div>
       </div>
     </footer>
