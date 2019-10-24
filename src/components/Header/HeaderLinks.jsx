@@ -20,7 +20,11 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
 import headerLinksStyle from "assets/jss/material-kit-react/components/headerLinksStyle.jsx";
-
+const useStyles = makeStyles(theme => ({
+  link: {
+    margin: theme.spacing(1),
+  },
+}));
 function HeaderLinks({ ...props }) {
   const { classes } = props;
   return (
@@ -35,16 +39,8 @@ function HeaderLinks({ ...props }) {
           }}
           buttonIcon={Apps}
           dropdownList={[
-            <Link to="/" className={classes.dropdownLink}>
-              Blog
-            </Link>,
-            <Link to="/videos" className={classes.dropdownLink}>
-            videos
-          </Link>,
-          
-            <Link to="/music" className={classes.dropdownLink}>
-            Music
-          </Link>,
+           
+           
             // <a
             //   href=""
             //   target="_blank"
@@ -56,6 +52,17 @@ function HeaderLinks({ ...props }) {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
+
+      <Link to="/" className={classes.link}>
+            Blog
+          </Link>,
+          <Link to="/videos" className={classes.link}>
+          videos
+        </Link>,
+        
+          <Link to="/music-page" className={classes.link}>
+          Music
+        </Link>,
         {/* <Button
           href="https://www.creative-tim.com/product/material-kit-react"
           color="transparent"
@@ -66,6 +73,9 @@ function HeaderLinks({ ...props }) {
         </Button> */}
       </ListItem>
       <ListItem className={classes.listItem}>
+
+    
+
         <Tooltip
           id="instagram-twitter"
           title="Follow us on twitter"

@@ -8,7 +8,6 @@ import withStyles from "@material-ui/core/styles/withStyles";
 
 // core components
 import parallaxStyle from "assets/jss/material-kit-react/components/parallaxStyle.jsx";
-import videoSource from "assets/videos/_Randomly_ by Katlyn Nichol.mp4";
 
 
 class Parallax extends React.Component {
@@ -44,7 +43,6 @@ class Parallax extends React.Component {
       children,
       style,
       image,
-      video,
       small
     } = this.props;
     
@@ -83,7 +81,7 @@ Parallax.propTypes = {
   children: PropTypes.node,
   style: PropTypes.string,
   image: PropTypes.string,
-  video: PropTypes.string,
+
 
 };
 

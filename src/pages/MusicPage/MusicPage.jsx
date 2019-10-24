@@ -3,7 +3,7 @@ import get from 'lodash/get';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components for routing our app without refresh
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 // @material-ui/icons
@@ -12,7 +12,7 @@ import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+// import Button from "components/CustomButtons/Button.jsx";
 import Parallax from "components/Parallax/Parallax.jsx";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
@@ -37,9 +37,9 @@ class MatrixPage extends React.Component {
 
   render() {
     const siteTitle = "Matrixblend Media"
-    // const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     // const [author] = get(this, 'props.data.allContentfulPerson.edges')
-  
+    console.log(posts)
     const { classes, ...rest } = this.props;
     return (
       <div>
@@ -68,11 +68,16 @@ class MatrixPage extends React.Component {
             </GridContainer>
           </div>
         </Parallax>
-
+            
         <div className={classNames(classes.main, classes.mainRaised)}>
 
           <GridItem md={12} className={classes.textCenter}>
            <BeatSection />
+
+
+           <GridItem>
+             <h1> Blog section</h1>
+           </GridItem>
           </GridItem>
          
           

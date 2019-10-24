@@ -1,18 +1,17 @@
 import React from "react";
 // @material-ui/core components
-import AwesomeFonts from '@fortawesome/fontawesome-svg-core';
 import withStyles from "@material-ui/core/styles/withStyles";
 
 // @material-ui/icons
-import Chat from "@material-ui/icons/Chat";
-import VerifiedUser from "@material-ui/icons/VerifiedUser";
-import Fingerprint from "@material-ui/icons/Fingerprint";
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-// core components
+// import Chat from "@material-ui/icons/Chat";
+// import VerifiedUser from "@material-ui/icons/VerifiedUser";
+// import Fingerprint from "@material-ui/icons/Fingerprint";
+// import MailOutlineIcon from '@material-ui/icons/MailOutline';
+// import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+// // core components
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
-import InfoArea from "components/InfoArea/InfoArea.jsx";
+// import InfoArea from "components/InfoArea/InfoArea.jsx";
 import Player from 'components/Player/Player.jsx';
 
 import productStyle from "assets/jss/material-kit-react/views/landingPageSections/productStyle.jsx";
