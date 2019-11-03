@@ -1,5 +1,5 @@
 import React from "react";
-import get from 'lodash/get';
+// import get from 'lodash/get';
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // react components for routing our app without refresh
@@ -17,7 +17,7 @@ import Parallax from "components/Parallax/Parallax.jsx";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import BeatSection from './Sections/BeatSection.jsx';
-
+import videoSrc from '../../assets/videos/logoVideo.mp4';
 // import SectionBasics from "./Sections/SectionBasics.jsx";
 // import SectionNavbars from "./Sections/SectionNavbars.jsx";
 // import SectionTabs from "./Sections/SectionTabs.jsx";
@@ -34,35 +34,41 @@ import BeatSection from './Sections/BeatSection.jsx';
 import mblendStyle from "assets/jss/material-kit-react/views/matrixPage.jsx";
 
 class MatrixPage extends React.Component {
-
+ 
   render() {
     const siteTitle = "Matrixblend Media"
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+    // const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     // const [author] = get(this, 'props.data.allContentfulPerson.edges')
-    console.log(posts)
+   
     const { classes, ...rest } = this.props;
+      
     return (
       <div>
         <Header
           brand={siteTitle}
           rightLinks={<HeaderLinks />}
           fixed
-          color="transparent"
+          color="white"
           changeColorOnScroll={{
             height: 400,
             color: "white"
           }}
           {...rest}
         />
-        <Parallax video="test" image={require("assets/img/bg4.jpg")}>
+        <Parallax video="test">
+        <video  width="100%"height="703" autoPlay  className={classes.textCenter}>
+                  <source  src={videoSrc} type="video/mp4" />
+                 </video>
           <div className={classes.container}>
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
+                
                   <h1 className={classes.title}>Matrixblend Media.</h1>
                   <h3 className={classes.subtitle}>
                    Influence Inspiration, insight, and ideas.
                   </h3>
+                  
                 </div>
               </GridItem>
             </GridContainer>
@@ -72,11 +78,15 @@ class MatrixPage extends React.Component {
         <div className={classNames(classes.main, classes.mainRaised)}>
 
           <GridItem md={12} className={classes.textCenter}>
+          
+          
            <BeatSection />
+
+           
 
 
            <GridItem>
-             <h1> Blog section</h1>
+             {/* <h1> Blog section</h1> */}
            </GridItem>
           </GridItem>
          
@@ -92,7 +102,7 @@ export default withStyles(mblendStyle)(MatrixPage);
 
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query {
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {

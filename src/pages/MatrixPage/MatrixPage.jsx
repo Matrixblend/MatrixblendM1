@@ -17,6 +17,8 @@ import Parallax from "components/Parallax/Parallax.jsx";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import ProductSection from "./Sections/ProductSection.jsx";
+import {Helmet} from "react-helmet";
+// import Phone from "components/Phone/Phone.jsx";
 // import ArticlePreview from "./Sections/ArticlePreviewSection.jsx";
 // import SectionBasics from "./Sections/SectionBasics.jsx";
 // import SectionNavbars from "./Sections/SectionNavbars.jsx";
@@ -36,7 +38,7 @@ import mblendStyle from "assets/jss/material-kit-react/views/matrixPage.jsx";
 class MatrixPage extends React.Component {
 
   render() {
-    const siteTitle = "Matrixblend Media"
+    const siteTitle = "Matrixblend Media";
     // const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     // const [author] = get(this, 'props.data.allContentfulPerson.edges')
   
@@ -54,6 +56,10 @@ class MatrixPage extends React.Component {
           }}
           {...rest}
         />
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Matrixblend Media | Influence | Inspiration| insight | and ideas.</title>
+        </Helmet>
         <Parallax video="test" image={require("assets/img/light-bulb.jpg")}>
           <div className={classes.container}>
             <GridContainer>
@@ -62,6 +68,7 @@ class MatrixPage extends React.Component {
                   <h1 className={classes.title}>Matrixblend Media.</h1>
                   <h3 className={classes.subtitle}>
                    Influence Inspiration, insight, and ideas.
+                   {/* <Phone /> */}
                   </h3>
                 </div>
               </GridItem>

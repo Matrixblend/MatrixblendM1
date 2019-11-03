@@ -5,6 +5,7 @@ const parallaxStyle = {
     overflow: "hidden",
     position: "relative",
     backgroundPosition: "center center",
+    backgroundColor: "black",
     backgroundSize: "cover",
     margin: "0",
     padding: "0",

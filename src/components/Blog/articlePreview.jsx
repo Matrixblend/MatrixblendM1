@@ -11,7 +11,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import styles from 'assets/jss/material-kit-react/views/Blog-kit/article-preview.jsx'
 
 function Blog ({ article }) {
-{/* <div>
+<div>
     <Img alt="" sizes={article.heroImage.sizes} />
     <h3 className={styles.previewTitle}>
       <Link to={`/blog/${article.slug}`}>{article.title}</Link>
@@ -22,7 +22,7 @@ function Blog ({ article }) {
         __html: article.description.childMarkdownRemark.html,
       }}
     />
-  </div> */}
+  </div> 
 }
 export default withStyles (styles)(Blog);
 

@@ -66,6 +66,9 @@ class Parallax extends React.Component {
         }}
         ref="parallax"
       >
+        {/* <video  autoplay loop="true" controls className={classes.textCenter}>
+                  <source  src="https://www.youtube.com/watch?v=vo4pMVb0R6M" type="video/mp4" />
+        </video>   */}
       {children}
       </div>
     );

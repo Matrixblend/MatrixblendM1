@@ -3,6 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
+// import _ from "lodash";
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import AppBar from "@material-ui/core/AppBar";
@@ -11,6 +12,8 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import SEO from "./SEO/SEO.jsx";
+
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
@@ -22,6 +25,7 @@ class Header extends React.Component {
     this.state = {
       mobileOpen: false
     };
+    this.seo = <SEO />;
     this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
     this.headerColorChange = this.headerColorChange.bind(this);
   }
@@ -52,7 +56,7 @@ class Header extends React.Component {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   }
-  componentWillUnmount() {
+  UNSAFE_componentWillMount() {
     if (this.props.changeColorOnScroll) {
       typeof window !== 'undefined' && window.removeEventListener("scroll", this.headerColorChange);
     }
@@ -64,6 +68,7 @@ class Header extends React.Component {
       rightLinks,
       leftLinks,
       brand,
+      img,
       fixed,
       absolute
     } = this.props;
@@ -73,8 +78,10 @@ class Header extends React.Component {
       [classes.absolute]: absolute,
       [classes.fixed]: fixed
     });
-    const brandComponent = <Button href='/' className={classes.title}>{brand}</Button>;
+    
+    const brandComponent = <Button href='/' className={classes.title}>{img !=="undefined" ? brand:"undefined"}</Button>;
     return (
+     
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
           {leftLinks !== undefined ? brandComponent : null}

@@ -25,7 +25,8 @@ class PlayerTemplate extends React.Component {
     )
     return (
       <div>
-        <h1>Download Tracks</h1>
+        {/* <h1>Download Tracks</h1> */}
+        <br/>
         {Player}
       </div>
     )
