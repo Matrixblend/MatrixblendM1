@@ -11,7 +11,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 // import Tooltip from "@material-ui/core/Tooltip";
-import { useThisdata } from "../../hooks/use-this-data.jsx";
+// import { useThisdata } from "../../hooks/use-this-data.jsx";
 // @material-ui/icons
 import { Apps, CloudDownload } from "@material-ui/icons";
 // import SEO from 'components/Header/SEO/SEO.jsx';
@@ -30,7 +30,7 @@ import headerLinksStyle from "assets/jss/material-kit-react/components/headerLin
 
 function HeaderLinks({ ...props },{siteTitle}) {
   const { classes } = props;
-  const { AllData } = useThisdata()
+  // const { AllData } = useThisdata()
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
@@ -45,15 +45,15 @@ function HeaderLinks({ ...props },{siteTitle}) {
           buttonIcon={Apps}
           dropdownList={[
             <Link to="/" className={classes.dropdownLink}>
-              All components
-              {siteMetadata.title}
+             
+              
             </Link>,
             <a
               href="https://creativetimofficial.github.io/material-kit-react/#/documentation?ref=mkr-navbar"
               target="_blank"
               className={classes.dropdownLink}
             >
-              Documentation
+              List coming soon!
             </a>
           ]}
             
@@ -64,11 +64,11 @@ function HeaderLinks({ ...props },{siteTitle}) {
         <Link className={classes.navLink} to="/music-page">Music</Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link className={classes.navLink} to="/blog">Blog</Link>
+        <Link className={classes.navLink} to="/">Blog</Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <Link className={classes.navLink} to="/about-us">About us</Link>
-      </ListItem>
+      </ListItem> */}
         
           
       
