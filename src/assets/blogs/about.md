@@ -1,10 +1,10 @@
 ---
-title: "About"
+title: "About Us"
 date: "2019-05-01T22:12:03.284Z"
 author: "@_joshhead_"
 category: "startup"
 description: "Influence Inspiration, insight, and ideas."
-tags: ["About", "about-us", "vision"]
+tags: ["about-us"]
 path: "/about"
 ---
 

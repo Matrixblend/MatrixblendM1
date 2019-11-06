@@ -5,6 +5,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 // import _ from "lodash";
 // @material-ui/core components
+// import { StaticQuery, graphql } from "gatsby"
 import withStyles from "@material-ui/core/styles/withStyles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -25,6 +26,8 @@ class Header extends React.Component {
     this.state = {
       mobileOpen: false
     };
+  
+   
     this.seo = <SEO />;
     this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
     this.headerColorChange = this.headerColorChange.bind(this);

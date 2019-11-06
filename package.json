@@ -69,6 +69,7 @@
     "typeface-roboto-slab": "0.0.72"
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^2.2.0",
     "prettier": "^1.16.4"
   },
   "repository": {
