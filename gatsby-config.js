@@ -6,6 +6,7 @@ let googleConfig
 try {
   // Load Google Config
   googleConfig = require('./.google')
+  
 } catch(_) {}
 
 
