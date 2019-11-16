@@ -1,20 +1,21 @@
-// const Promise = require('bluebird')
-// const path = require('path')
+const Promise = require('bluebird')
+const path = require('path')
 // const { createFilePath } = require(`gatsby-source-filesystem`)
-const path = require(`path`)
+// const graphql = require('gatsby')
+
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/components/Blog/templates/blogTemplate.jsx`)
+  const blogPostTemplate = path.resolve(`./src/components/Blog/templates/blog-post.jsx`)
 
   const result = await graphql(`
-  query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query {
+    markdownRemark(frontmatter: {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        path @include(if: $path)
+        path 
         title
       }
     }
@@ -40,60 +41,48 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   })
 }
 
-// export const pageQuery = graphql`
-//   query($path: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $path } }) {
-//       html
-//       frontmatter {
-//         date(formatString: "MMMM DD, YYYY")
-//         path
-//         title
-//       }
-//     }
-//   }
-// `
 
 
-// exports.createPages = ({ graphql, actions }) => {
-//   const { createPage } = actions
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
 
  
 
-//   return new Promise((resolve, reject) => {
-//     const blogPost = path.resolve('./src/components/Blog/templates/blogTemplate.jsx')
-//     resolve(
-//        graphql(
-//       `
-//       {
-//         allContentfulBlogPost {
-//           edges {
-//             node {
-//               id
-//               slug
-//               title
-//             }
-//           }
-//         }
-//       }
+  return new Promise((resolve, reject) => {
+    const blogPost = path.resolve(`./src/components/Blog/templates/blog-post.jsx`)
+    resolve(
+       graphql(
+      `
+      {
+        allContentfulBlogPost {
+          edges {
+            node {
+              id
+              slug
+              title
+            }
+          }
+        }
+      }
       
-//           `
-//       ).then(result => {
-//         if (result.errors) {
-//           console.log(result.errors)
-//           reject(result.errors)
-//         }
+          `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
 
-//         const posts = result.data.allContentfulBlogPost.edges
-//         posts.forEach((post, index) => {
-//           createPage({
-//             path: `/blog/${post.node.slug}/`,
-//             component: blogPost,
-//             context: {
-//               slug: post.node.slug
-//             },
-//           })
-//         })
-//       })
-//     )
-//   })
-// }
+        const posts = result.data.allContentfulBlogPost.edges
+        posts.forEach((post, index) => {
+          createPage({
+            path: `/blog/${post.node.slug}/`,
+            component: blogPost,
+            context: {
+              slug: post.node.slug
+            },
+          })
+        })
+      })
+    )
+  })
+}

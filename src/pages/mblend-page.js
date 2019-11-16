@@ -1,6 +1,4 @@
-import React from "react";
-import MatrixPage from "./MatrixPage/MatrixPage";
+import React from "react"
+import MatrixPage from "./MatrixPage/MatrixPage"
 
-export default () => (
-  <MatrixPage/>
-);
+export default () => <MatrixPage />

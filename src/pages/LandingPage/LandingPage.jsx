@@ -1,35 +1,35 @@
-import React from "react";
+import React from "react"
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from "classnames"
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from "@material-ui/core/styles/withStyles"
 
 // @material-ui/icons
 
 // React icons
-import { FaPlay } from 'react-icons/fa';
+import { FaPlay } from "react-icons/fa"
 
 // core components
-import Header from "components/Header/Header.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import Button from "components/CustomButtons/Button.jsx";
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import Parallax from "components/Parallax/Parallax.jsx";
+import Header from "components/Header/Header.jsx"
+import Footer from "components/Footer/Footer.jsx"
+import GridContainer from "components/Grid/GridContainer.jsx"
+import GridItem from "components/Grid/GridItem.jsx"
+import Button from "components/CustomButtons/Button.jsx"
+import HeaderLinks from "components/Header/HeaderLinks.jsx"
+import Parallax from "components/Parallax/Parallax.jsx"
 
-import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx";
+import landingPageStyle from "assets/jss/material-kit-react/views/landingPage.jsx"
 
 // Sections for this page
-import ProductSection from "./Sections/ProductSection.jsx";
-import TeamSection from "./Sections/TeamSection.jsx";
-import WorkSection from "./Sections/WorkSection.jsx";
+import ProductSection from "./Sections/ProductSection.jsx"
+import TeamSection from "./Sections/TeamSection.jsx"
+import WorkSection from "./Sections/WorkSection.jsx"
 
-const dashboardRoutes = [];
+const dashboardRoutes = []
 
 class LandingPage extends React.Component {
   render() {
-    const { classes, ...rest } = this.props;
+    const { classes, ...rest } = this.props
     return (
       <div>
         <Header
@@ -40,7 +40,7 @@ class LandingPage extends React.Component {
           fixed
           changeColorOnScroll={{
             height: 400,
-            color: "black"
+            color: "black",
           }}
           {...rest}
         />
@@ -63,7 +63,7 @@ class LandingPage extends React.Component {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaPlay/>
+                  <FaPlay />
                   Watch video
                 </Button>
               </GridItem>
@@ -79,8 +79,8 @@ class LandingPage extends React.Component {
         </div>
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(landingPageStyle)(LandingPage);
+export default withStyles(landingPageStyle)(LandingPage)

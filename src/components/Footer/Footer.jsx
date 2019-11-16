@@ -1,26 +1,26 @@
 /*eslint-disable*/
-import React from "react";
+import React from "react"
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 // nodejs library that concatenates classes
-import classNames from "classnames";
-import { List, ListItem, withStyles } from "@material-ui/core";
+import classNames from "classnames"
+import { List, ListItem, withStyles } from "@material-ui/core"
 
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+// import Favorite from "@material-ui/icons/Favorite";
 
-import footerStyle from "assets/jss/material-kit-react/components/footerStyle.jsx";
+import footerStyle from "assets/jss/material-kit-react/components/footerStyle.jsx"
 
 function Footer({ ...props }) {
-  const { classes, whiteFont } = props;
+  const { classes, whiteFont } = props
   const footerClasses = classNames({
     [classes.footer]: true,
-    [classes.footerWhiteFont]: whiteFont
-  });
+    [classes.footerWhiteFont]: whiteFont,
+  })
   const aClasses = classNames({
     [classes.a]: true,
-    [classes.footerWhiteFont]: whiteFont
-  });
+    [classes.footerWhiteFont]: whiteFont,
+  })
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
@@ -36,37 +36,24 @@ function Footer({ ...props }) {
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="/about"
-                className={classes.block}
-               
-              >
+              <a href="/about" className={classes.block}>
                 About us
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="/"
-                className={classes.block}
-                
-              >
+              <a href="/" className={classes.block}>
                 Blog (Coming Soon.)
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="/"
-                className={classes.block}
-                
-              >
+              <a href="/" className={classes.block}>
                 Licenses
               </a>
             </ListItem>
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()}  
-          {" "}
+          &copy; {1900 + new Date().getYear()}{" "}
           <a
             href="https://www.matrixblendmedia.com"
             className={aClasses}
@@ -77,12 +64,12 @@ function Footer({ ...props }) {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
 Footer.propTypes = {
   classes: PropTypes.object.isRequired,
-  whiteFont: PropTypes.bool
-};
+  whiteFont: PropTypes.bool,
+}
 
-export default withStyles(footerStyle)(Footer);
+export default withStyles(footerStyle)(Footer)

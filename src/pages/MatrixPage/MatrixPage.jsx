@@ -1,23 +1,23 @@
-import React from "react";
+import React from "react"
 // import get from 'lodash/get';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from "classnames"
 // react components for routing our app without refresh
 // import { Link } from "gatsby";
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
+import withStyles from "@material-ui/core/styles/withStyles"
 // @material-ui/icons
 // core components
-import Header from "components/Header/Header.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
+import Header from "components/Header/Header.jsx"
+import Footer from "components/Footer/Footer.jsx"
+import GridContainer from "components/Grid/GridContainer.jsx"
+import GridItem from "components/Grid/GridItem.jsx"
 // import Button from "components/CustomButtons/Button.jsx";
-import Parallax from "components/Parallax/Parallax.jsx";
+import Parallax from "components/Parallax/Parallax.jsx"
 // sections for this page
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import ProductSection from "./Sections/ProductSection.jsx";
-import {Helmet} from "react-helmet";
+import HeaderLinks from "components/Header/HeaderLinks.jsx"
+import ProductSection from "./Sections/ProductSection.jsx"
+import { Helmet } from "react-helmet"
 // import Phone from "components/Phone/Phone.jsx";
 // import ArticlePreview from "./Sections/ArticlePreviewSection.jsx";
 // import SectionBasics from "./Sections/SectionBasics.jsx";
@@ -33,16 +33,15 @@ import {Helmet} from "react-helmet";
 // import SectionExamples from "./Sections/SectionExamples.jsx";
 // import SectionDownload from "./Sections/SectionDownload.jsx";
 
-import mblendStyle from "assets/jss/material-kit-react/views/matrixPage.jsx";
+import mblendStyle from "assets/jss/material-kit-react/views/matrixPage.jsx"
 
 class MatrixPage extends React.Component {
-
   render() {
-    const siteTitle = "Matrixblend Media";
+    const siteTitle = "Matrixblend Media"
     // const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     // const [author] = get(this, 'props.data.allContentfulPerson.edges')
-  
-    const { classes, ...rest } = this.props;
+
+    const { classes, ...rest } = this.props
     return (
       <div>
         <Header
@@ -52,13 +51,15 @@ class MatrixPage extends React.Component {
           color="transparent"
           changeColorOnScroll={{
             height: 400,
-            color: "white"
+            color: "white",
           }}
           {...rest}
         />
         <Helmet>
           <meta charSet="utf-8" />
-          <title>Matrixblend Media | Influence | Inspiration| insight | and ideas.</title>
+          <title>
+            Matrixblend Media | Influence | Inspiration| insight | and ideas.
+          </title>
         </Helmet>
         <Parallax video="test" image={require("assets/img/light-bulb.jpg")}>
           <div className={classes.container}>
@@ -67,8 +68,8 @@ class MatrixPage extends React.Component {
                 <div className={classes.brand}>
                   <h1 className={classes.title}>Matrixblend Media.</h1>
                   <h3 className={classes.subtitle}>
-                   Influence Inspiration, insight, and ideas.
-                   {/* <Phone /> */}
+                    Influence Inspiration, insight, and ideas.
+                    {/* <Phone /> */}
                   </h3>
                 </div>
               </GridItem>
@@ -77,19 +78,14 @@ class MatrixPage extends React.Component {
         </Parallax>
 
         <div className={classNames(classes.main, classes.mainRaised)}>
-
-          <GridItem md={12} className={classes.textCenter}>
-           
-          </GridItem>
+          <GridItem md={12} className={classes.textCenter}></GridItem>
           {/* <ArticlePreview /> */}
           <ProductSection />
-          
         </div>
         <Footer />
       </div>
-    );
+    )
   }
 }
 
-export default withStyles(mblendStyle)(MatrixPage);
-
+export default withStyles(mblendStyle)(MatrixPage)

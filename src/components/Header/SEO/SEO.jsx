@@ -43,9 +43,7 @@ const SiteMetadata = ({ pathname }) => {
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content={twitterUsername} />
 
-      <meta property="og:description"  content={description} />
-   
-    
+      <meta property="og:description" content={description} />
     </Helmet>
   )
 }

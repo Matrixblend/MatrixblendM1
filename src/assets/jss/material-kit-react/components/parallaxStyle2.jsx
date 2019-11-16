@@ -11,11 +11,11 @@ const parallaxStyle2 = {
     padding: "0",
     border: "0",
     display: "flex",
-    alignItems: "center"
+    alignItems: "center",
   },
   filter: {
     "&:before": {
-      background: "rgba(0, 0, 0, 0.5)"
+      background: "rgba(0, 0, 0, 0.5)",
     },
     "&:after,&:before": {
       position: "absolute",
@@ -25,12 +25,12 @@ const parallaxStyle2 = {
       display: "block",
       left: "0",
       top: "0",
-      content: "''"
-    }
+      content: "''",
+    },
   },
   small: {
-    height: "380px"
-  }
-};
+    height: "380px",
+  },
+}
 
-export default parallaxStyle2;
+export default parallaxStyle2

@@ -1,6 +1,4 @@
-import React from "react";
-import MusicPage from "./MusicPage/MusicPage";
+import React from "react"
+import MusicPage from "./MusicPage/MusicPage"
 
-export default () => (
-  <MusicPage/>
-);
+export default () => <MusicPage />

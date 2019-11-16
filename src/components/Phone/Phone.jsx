@@ -19,8 +19,6 @@
 
 // const { accoutId, auth} = twilioConfig
 
-
-
 // if (!accoutId || !auth) {
 //   throw new Error(
 //     'Twilio accountId and the Auth token need to be provided.'
@@ -29,7 +27,5 @@
 
 // // nodejs library that concatenates classes
 
-
 // // let client = new twilio(accountSid, authToken);
 // // console.log(client);
-
